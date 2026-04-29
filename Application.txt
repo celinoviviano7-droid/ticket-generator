@@ -1,0 +1,81 @@
++-----------------------------------------------------------------------------------------+
+|                                «Application»                                            |
+|                             e-Bracelet Anosiravo                                        |
++-----------------------------------------------------------------------------------------+
+|                                                                                         |
+|  +-----------------------------+      +--------------------------------------------+    |
+|  |         «Package»           |      |                 «Package»                  |    |
+|  |         frontend            |      |                 backend                    |    |
+|  +-----------------------------+      +--------------------------------------------+    |
+|  | - public/index.html         |      | - app.js                                  |    |
+|  | - src/                      |      | - server.js                               |    |
+|  |   - components/             |      | - package.json                            |    |
+|  |   - pages/                  |      |                                            |    |
+|  |   - services/               |      |  +-------------------+                     |    |
+|  |   - utils/                  |      |  |    «Package»     |                     |    |
+|  | - package.json              |      |  |    controllers    |                     |    |
+|  | - vite.config.js            |      |  +-------------------+                     |    |
+|  |                             |      |  | - TicketController.js |                 |    |
+|  |  +-----------------------+  |      |  | - ScannerController.js|                 |    |
+|  |  |      «Package»        |  |      |  | - StatsController.js  |                 |    |
+|  |  |       components      |  |      |  | - ChatController.js   |                 |    |
+|  |  +-----------------------+  |      |  +-------------------+                     |    |
+|  |  | - ui/                 |  |      |                                            |    |
+|  |  |   - Button.jsx        |  |      |  +-------------------+                     |    |
+|  |  |   - Input.jsx         |  |      |  |    «Package»     |                     |    |
+|  |  |   - Modal.jsx         |  |      |  |      models       |                     |    |
+|  |  | - VisitorForm.jsx     |  |      |  +-------------------+                     |    |
+|  |  | - TicketSummary.jsx   |  |      |  | - Ticket.js       |                     |    |
+|  |  | - StatsDashboard.jsx  |  |      |  | - Visitor.js      |                     |    |
+|  |  | - ChatWidget.jsx      |  |      |  | - ScanEvent.js    |                     |    |
+|  |  +-----------------------+  |      |  | - ChatSession.js  |                     |    |
+|  |                             |      |  +-------------------+                     |    |
+|  |  +-----------------------+  |      |                                            |    |
+|  |  |      «Package»        |  |      |  +-------------------+                     |    |
+|  |  |        pages          |  |      |  |    «Package»     |                     |    |
+|  |  +-----------------------+  |      |  |      routes       |                     |    |
+|  |  | - KioskPage.jsx       |  |      |  +-------------------+                     |    |
+|  |  | - DashboardPage.jsx   |  |      |  | - tickets.js      |                     |    |
+|  |  | - ScannerPage.jsx     |  |      |  | - scanner.js      |                     |    |
+|  |  | - ChatPage.jsx        |  |      |  | - stats.js        |                     |    |
+|  |  +-----------------------+  |      |  | - chat.js         |                     |    |
+|  |                             |      |  +-------------------+                     |    |
+|  |  +-----------------------+  |      |                                            |    |
+|  |  |      «Package»        |  |      |  +-------------------+                     |    |
+|  |  |       services        |  |      |  |    «Package»     |                     |    |
+|  |  +-----------------------+  |      |  |     services      |                     |    |
+|  |  | - api.js              |  |      |  +-------------------+                     |    |
+|  |  | - ticketService.js    |  |      |  | - ticketService.js|                     |    |
+|  |  | - scannerService.js   |  |      |  | - scannerService.js|                    |    |
+|  |  | - chatService.js      |  |      |  | - chatService.js  |                     |    |
+|  |  | - webrtcService.js    |  |      |  | - llmService.js   |                     |    |
+|  |  +-----------------------+  |      |  +-------------------+                     |    |
+|  |                             |      |                                            |    |
+|  +-----------------------------+      +--------------------------------------------+    |
+|                                                                                         |
+|  +-----------------------------------+      +-------------------------------------+     |
+|  |            «Package»              |      |             «Package»               |     |
+|  |            database               |      |              shared                 |     |
+|  +-----------------------------------+      +-------------------------------------+     |
+|  | - migrations/                     |      | - constants/                        |     |
+|  |   - 001_create_tickets_table.sql  |      |   - tariffs.js                      |     |
+|  |   - 002_create_visitors_table.sql |      |   - countries.js                    |     |
+|  |   - 003_create_scan_events_table.sql |   |   - circuits.js                    |     |
+|  |   - 004_create_chat_sessions_table.sql|  | - helpers/                          |     |
+|  | - anosiravo.db                    |      |   - validation.js                   |     |
+|  +-----------------------------------+      |   - formatters.js                   |     |
+|                                             +-------------------------------------+     |
+|                                                                                         |
+|  +-----------------------------------+                                                  |
+|  |            «Package»              |                                                  |
+|  |             llm-api               |                                                  |
+|  +-----------------------------------+                                                  |
+|  | - app.py                          |                                                  |
+|  | - models/                         |                                                  |
+|  |   - chatbot.py                    |                                                  |
+|  | - routes/                         |                                                  |
+|  |   - chat.py                       |                                                  |
+|  | - requirements.txt                |                                                  |
+|  +-----------------------------------+                                                  |
+|                                                                                         |
++-----------------------------------------------------------------------------------------+

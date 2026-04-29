@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #213547;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Styles spécifiques pour les champs de saisie */
+input, select, textarea {
+  color: #213547 !important;
+  background-color: white !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+/* Styles pour les options des selects */
+option {
+  color: #213547 !important;
+  background-color: white !important;
+}

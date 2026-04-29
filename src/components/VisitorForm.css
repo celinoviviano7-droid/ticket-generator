@@ -1,0 +1,362 @@
+.visitor-form {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Affichage de l'adresse IP */
+.ip-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.ip-label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.ip-value {
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .visitor-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  min-width: 200px;
+}
+
+/* Styles pour les selects */
+.input-group select.input-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Styles pour les champs en erreur */
+.input-field.input-error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Labels requis */
+.input-label {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Styles pour les groupes d'input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group .input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #2c3e50 !important;
+  font-weight: 500;
+}
+
+.input-group .input-field:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  color: #2c3e50 !important;
+}
+
+.input-group .input-field:hover {
+  border-color: #cbd5e0;
+}
+
+.input-group .input-field::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+/* Styles spécifiques pour les inputs de type text et email */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"] {
+  color: #2c3e50 !important;
+  background-color: white !important;
+}
+
+/* Styles pour les selects */
+.input-group select.input-field {
+  color: #2c3e50 !important;
+  background-color: white !important;
+}
+
+.input-group select.input-field option {
+  color: #2c3e50;
+  background-color: white;
+}
+
+/* Modal du ticket généré */
+.ticket-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ticket-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-header h3 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.ticket-info {
+  margin-bottom: 2rem;
+}
+
+.ticket-number {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.visitor-details {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.visitor-details h4 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.visitor-details p {
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.barcode-section {
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  background-color: #fefefe;
+}
+
+.barcode-section h4 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.barcode {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.barcode img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barcode-note {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+ .ticket-actions {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-top: 2rem;
+ }
+
+ .ticket-actions .btn {
+   min-width: 150px;
+   margin: 0.5rem;
+ }
+
+ /* Style spécifique pour le bouton PDF */
+ .ticket-actions .btn:nth-child(1) {
+   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   border-color: #667eea;
+ }
+
+ .ticket-actions .btn:nth-child(1):hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Informations de redirection */
+.ticket-redirect-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #0ea5e9;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.redirect-message {
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.redirect-note {
+  color: #0c4a6e;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.ticket-actions .btn {
+  min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticket-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .ticket-actions {
+    flex-direction: column;
+  }
+  
+  .ticket-actions .btn {
+    width: 100%;
+  }
+  
+  .barcode img {
+    width: 100%;
+    max-width: 280px;
+  }
+}

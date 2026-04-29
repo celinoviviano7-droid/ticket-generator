@@ -1,0 +1,223 @@
+.scan-guide {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.guide-header {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guide-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.close-guide-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-guide-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.guide-content {
+  padding: 2rem;
+}
+
+.tip-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tip-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: tipBounce 2s ease-in-out infinite;
+}
+
+@keyframes tipBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.tip-display h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.tip-description {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.tip-details {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.tip-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-btn {
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  color: #6b7280;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+  color: white;
+  transform: scale(1.1);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+.tip-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #8b5cf6;
+  transform: scale(1.2);
+}
+
+.guide-footer {
+  background: #f8fafc;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+.guide-footer p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guide-content {
+    padding: 1.5rem;
+  }
+  
+  .tip-icon {
+    font-size: 3rem;
+  }
+  
+  .tip-display h4 {
+    font-size: 1.2rem;
+  }
+  
+  .tip-description {
+    font-size: 1rem;
+  }
+  
+  .tip-details {
+    font-size: 0.9rem;
+  }
+  
+  .tip-navigation {
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .guide-header {
+    padding: 1rem;
+  }
+  
+  .guide-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .guide-content {
+    padding: 1rem;
+  }
+  
+  .tip-icon {
+    font-size: 2.5rem;
+  }
+  
+  .tip-display h4 {
+    font-size: 1.1rem;
+  }
+  
+  .tip-description {
+    font-size: 0.95rem;
+  }
+  
+  .tip-details {
+    font-size: 0.85rem;
+  }
+  
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
